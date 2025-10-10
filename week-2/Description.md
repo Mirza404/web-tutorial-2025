@@ -62,7 +62,7 @@ Basic table structure
 
 `<table>` container
 
-`<tr>` – table row
+`<tr>` table row
 
 `<th>` – table header cell
 
@@ -78,12 +78,9 @@ Attributes & features
 
 `<thead>`, `<tbody>`, `<tfoot>` (to semantically separate parts)
 
-When not to use tables
+When **NOT** to use tables:
 
-Don’t use tables for layout — that’s bad practice (tables are for tabular data)
-
-Use CSS / grid / flexbox later (but for now that’s future)
-
+Don’t use tables for layout, because that’s bad practice (tables are for tabular data)
 ---
 
 #### Part 3
