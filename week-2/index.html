@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    header, nav, main, footer, article, aside, section {
+      padding: 1rem;
+      margin: 0.5rem;
+      border-radius: 8px;
+    }
+
+    header, footer {
+      background: #f5f5f5;
+    }
+
+    nav {
+      background: #ddd;
+    }
+
+    main {
+      background: #fafafa;
+    }
+
+    aside {
+      background: #eef;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    table, th, td {
+      border: 1px solid #888;
+    }
+
+    th, td {
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    figure {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    figcaption {
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header landmark -->
+  <header>
+    <h1>HTML Basics Showcase</h1>
+    <p>Demonstrating core HTML, structure, tables, and accessibility</p>
+  </header>
+
+  <!-- Navigation landmark -->
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#tags">Basic Tags</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#accessibility">Accessibility</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <main id="intro">
+    <article>
+      <header>
+        <h2>1. HTML Boilerplate / Skeleton</h2>
+      </header>
+
+      <p>This is a simple example of how an HTML page is structured:</p>
+
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+
+      <section id="tags">
+        <h3>2. Basic Tags and Structure</h3>
+        <p>HTML uses <em>tags</em> to structure content. For example:</p>
+        <ul>
+          <li><strong>Headings:</strong> `<h1>` … `<h6>`</li>
+          <li><strong>Paragraphs:</strong> `<p>`</li>
+          <li><strong>Links:</strong> `<a href="#">Example link</a>`</li>
+          <li><strong>Images:</strong> `<img src="image.jpg" alt="Description">`</li>
+        </ul>
+
+        <h4>Example:</h4>
+        <p>This is a <strong>paragraph</strong> with an <a href="#">example link</a>.</p>
+        <img src="https://via.placeholder.com/150" alt="Placeholder image for demo">
+      </section>
+
+      <section>
+        <h3>3. Semantic / Structural Tags</h3>
+        <p>Semantic tags give meaning to content:</p>
+        <ul>
+          <li><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code></li>
+          <li><code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code></li>
+          <li><code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code></li>
+        </ul>
+
+        <figure>
+          <img src="https://via.placeholder.com/200x100" alt="Semantic example">
+          <figcaption>A simple figure with caption</figcaption>
+        </figure>
+      </section>
+
+      <section id="tables">
+        <h3>4. Tables</h3>
+        <p>Tables organize data into rows and columns:</p>
+
+        <table>
+          <caption>Example Student Grades</caption>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Subject</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alice</td>
+              <td>Math</td>
+              <td>95</td>
+            </tr>
+            <tr>
+              <td>Bob</td>
+              <td>Science</td>
+              <td>88</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">End of Table</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </article>
+
+    <aside>
+      <h3>Did you know?</h3>
+      <p>Using semantic HTML improves SEO and accessibility for screen readers!</p>
+    </aside>
+
+    <section id="accessibility">
+      <h2>5. Accessibility Basics</h2>
+      <p>Here are a few accessibility-friendly practices:</p>
+      <ul>
+        <li>Use <code>alt</code> text for images.</li>
+        <li>Keep headings in logical order (<code>h1</code> → <code>h2</code> → <code>h3</code>).</li>
+        <li>Use semantic tags instead of too many <code>&lt;div&gt;</code> elements.</li>
+        <li>Ensure high color contrast (dark text on light background).</li>
+      </ul>
+
+      <form aria-label="Contact form example">
+        <label for="name">Name:</label><br>
+        <input id="name" type="text" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input id="email" type="email" name="email"><br><br>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer landmark -->
+  <footer>
+    <p>&copy; 2025 HTML Showcase Example</p>
+    <address>Contact: <a href="mailto:example@example.com">example@example.com</a></address>
+  </footer>
+</body>
+</html>
