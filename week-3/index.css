@@ -1,6 +1,4 @@
-/* ================================
-   🌐 GENERAL PAGE SETTINGS
-=================================== */
+/* GENERAL PAGE SETTINGS */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,9 +15,7 @@ body {
   padding: 20px;
 }
 
-/* ================================
-   🧱 HEADER
-=================================== */
+/* HEADER */
 header {
   text-align: center;
   margin-bottom: 30px;
@@ -47,9 +43,7 @@ header a:hover {
   text-decoration: underline;
 }
 
-/* ================================
-   🧭 NAVIGATION
-=================================== */
+/* NAVIGATION */
 nav {
   background: #0078d7;
   padding: 10px;
@@ -69,9 +63,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ================================
-   🧩 MAIN CONTENT
-=================================== */
+/* MAIN SECTION */
 main section {
   background: white;
   border: 1px solid #ddd;
@@ -88,9 +80,7 @@ main h2 {
   color: #0078d7;
 }
 
-/* ================================
-   🧾 TABLE STYLING
-=================================== */
+/* TABLE STYLES */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -113,9 +103,7 @@ th {
   background-color: #f0f0f0;
 }
 
-/* ================================
-   💼 EXPERIENCE SECTION
-=================================== */
+/* EXPERIENCE */
 article {
   margin-bottom: 15px;
 }
@@ -130,9 +118,7 @@ time {
   color: #555;
 }
 
-/* ================================
-   🧠 SKILLS SECTION
-=================================== */
+/* SKILLS */
 #skills ul {
   list-style-type: square;
   padding-left: 20px;
@@ -142,9 +128,7 @@ time {
   margin-bottom: 5px;
 }
 
-/* ================================
-   📞 FOOTER
-=================================== */
+/* FOOTER */
 footer {
   text-align: center;
   margin-top: 30px;
@@ -163,9 +147,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* ================================
-   📱 RESPONSIVE DESIGN
-=================================== */
+/* responsive  part*/
 @media (max-width: 600px) {
   body {
     padding: 10px;
