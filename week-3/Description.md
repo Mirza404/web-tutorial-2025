@@ -2,12 +2,16 @@
 
 ## 🧠 Introduction: What Is CSS?
 
-CSS (**Cascading Style Sheets**) is what we use to style our HTML.  
-While HTML defines **structure and content**, CSS defines **style and layout** — colors, fonts, spacing, alignment, and responsiveness.
+CSS (**Cascading Style Sheets**) gives **style and visual structure** to your HTML.  
+HTML defines the **content**, while CSS defines **appearance and layout** — like colors, spacing, fonts, and responsiveness.
 
-#### In the last tutorial, we used only HTML. The page looked very bland and there was a limited amount of creativity involved.
+By the end of this roadmap, you’ll understand how to:
 
-By the end of this lesson, you should understand how to **connect CSS to HTML**, use basic **selectors and properties**, and create **visually structured web pages**.
+* Connect CSS to HTML  
+* Use selectors (basic and advanced)  
+* Style text, colors, and layouts  
+* Build responsive designs  
+* Use pseudo-classes & pseudo-elements
 
 ---
 
@@ -15,24 +19,19 @@ By the end of this lesson, you should understand how to **connect CSS to HTML**,
 
 ### 🗂 What Is a Stylesheet?
 
-A stylesheet contains rules that tell the browser how elements should look.  
-You can include CSS in three ways:
+You can add CSS in three ways:
 
 1. **Inline:**
    ```html
-   <p style="color: red;">Hello</p>
+   <p style="color: red;">Hello!</p>
    ```
-
-2. **Internal:** inside `<style>` in the `<head>`
-
+2. **Internal:** inside `<style>` tags in the `<head>`
    ```html
    <style>
      p { color: red; }
    </style>
    ```
-
 3. **External (recommended):**
-
    ```html
    <link rel="stylesheet" href="style.css">
    ```
@@ -41,7 +40,7 @@ You can include CSS in three ways:
 
 ### ⚙️ CSS Syntax
 
-Every CSS rule has:
+Every rule has a **selector**, **property**, and **value**:
 
 ```css
 selector {
@@ -62,25 +61,79 @@ h1 {
 
 ### 🎯 Selectors
 
-Selectors target which HTML elements you want to style.
-
-| Type       | Example      | Description                                   |
-| ----------- | ------------ | --------------------------------------------- |
-| Element     | `p`          | Selects all `<p>` tags                        |
-| Class       | `.highlight` | Selects all elements with `class="highlight"` |
-| ID          | `#header`    | Selects element with `id="header"`            |
-| Descendant  | `article p`  | Selects `<p>` inside `<article>`              |
-| Group       | `h1, h2, h3` | Applies to multiple elements                  |
+| Type        | Example           | Description |
+| ------------ | ----------------- | ------------ |
+| Element      | `p`               | Selects all `<p>` tags |
+| Class        | `.highlight`      | Selects all elements with class `"highlight"` |
+| ID           | `#header`         | Selects an element with id `"header"` |
+| Descendant   | `article p`       | Selects `<p>` elements inside `<article>` |
+| Child        | `div > p`         | Selects `<p>` elements that are *direct* children of `<div>` |
+| Adjacent Sibling | `h2 + p`     | Selects the first `<p>` immediately after an `<h2>` |
+| General Sibling | `h2 ~ p`     | Selects *all* `<p>` that follow an `<h2>` (not just the first) |
+| Attribute    | `input[type="text"]` | Selects all `<input>` elements with type `"text"` |
+| Universal    | `*`               | Selects *all* elements on the page |
 
 ---
 
-## 🎨 Part 2 – Colors, Text, and Fonts (10–20 min)
+## 🌟 Part 2 – Pseudo-Classes & Pseudo-Elements (10–15 min)
+
+### 🧩 Pseudo-Classes
+
+Pseudo-classes target an element’s **state or condition**.
+
+| Example | Description |
+| -------- | ------------ |
+| `a:hover` | When a user hovers over a link |
+| `a:visited` | Styles visited links |
+| `input:focus` | Styles an input field when focused |
+| `:first-child` | Selects the first child of its parent |
+| `:last-child` | Selects the last child of its parent |
+| `:nth-child(2)` | Selects the 2nd child of a parent |
+| `:not(.hidden)` | Selects all elements except those with the `.hidden` class |
+
+Example:
+
+```css
+button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+```
+
+---
+
+### ✨ Pseudo-Elements
+
+Pseudo-elements style **parts of elements** (like the first letter or add virtual content).
+
+| Example | Description |
+| -------- | ------------ |
+| `p::first-letter` | Styles the first letter of a paragraph |
+| `p::first-line` | Styles the first line of text |
+| `::before` | Inserts content *before* an element |
+| `::after` | Inserts content *after* an element |
+
+Example:
+
+```css
+h2::before {
+  content: "🌟 ";
+}
+
+p::first-line {
+  font-weight: bold;
+}
+```
+
+---
+
+## 🎨 Part 3 – Colors, Text, and Fonts (10–20 min)
 
 ### 🌈 Colors
 
-You can use colors in many formats:
+CSS supports multiple color formats:
 
-* Named color: `color: red;`
+* Named: `color: red;`
 * HEX: `color: #ff0000;`
 * RGB: `color: rgb(255, 0, 0);`
 * HSL: `color: hsl(0, 100%, 50%);`
@@ -88,8 +141,6 @@ You can use colors in many formats:
 ---
 
 ### ✍️ Text Styling
-
-Common text properties:
 
 ```css
 p {
@@ -105,11 +156,13 @@ p {
 
 ### 🖋 Fonts
 
-Web-safe fonts are built-in. For custom fonts, you can use Google Fonts:
+You can import fonts from Google Fonts:
 
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 ```
+
+Then apply it:
 
 ```css
 body {
@@ -119,17 +172,16 @@ body {
 
 ---
 
-## 📦 Part 3 – The Box Model (15–25 min)
+## 📦 Part 4 – The Box Model (15–25 min)
 
-Everything in HTML is a **box**.
-Each element has four parts:
+Everything in CSS is a **box**.
 
-1. **Content** – the actual text or image  
-2. **Padding** – space inside the box  
-3. **Border** – the line surrounding the box  
-4. **Margin** – space outside the box  
+Each element has:
 
-Example:
+1. **Content** – text or image  
+2. **Padding** – space between content and border  
+3. **Border** – the outline  
+4. **Margin** – space outside the border  
 
 ```css
 div {
@@ -143,35 +195,45 @@ div {
 
 ### 🧱 Display Types
 
-* `block` – full-width elements (`<div>`, `<p>`)  
-* `inline` – fits content (`<span>`, `<a>`)  
+* `block` – takes full width (e.g., `<div>`, `<p>`)  
+* `inline` – fits around content (e.g., `<span>`, `<a>`)  
 * `inline-block` – inline but can set width/height  
-* `none` – hides element  
+* `none` – hides the element  
 
 ---
 
-## 🧭 Part 4 – Positioning & Layout (15–25 min)
+## 🧭 Part 5 – Positioning & Layout (15–25 min)
 
 ### 📍 The `position` Property
 
-Controls how an element is placed:
+| Type | Description |
+| ----- | ------------ |
+| `static` | Default, follows normal document flow |
+| `relative` | Moved relative to its original position |
+| `absolute` | Positioned relative to its parent (if parent is positioned) |
+| `fixed` | Stays in place while scrolling |
+| `sticky` | Acts like relative until scrolled, then “sticks” |
 
-* `static` – default (normal flow)  
-* `relative` – offset from its normal position  
-* `absolute` – positioned relative to parent  
-* `fixed` – stays in the same place when scrolling  
-* `sticky` – behaves like relative, but sticks on scroll  
+Example:
+
+```css
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+```
 
 ---
 
 ### 🧩 Flexbox Basics
 
-Use for easy alignment and spacing:
+Align items easily in a row or column.
 
 ```css
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 ```
@@ -180,19 +242,19 @@ Use for easy alignment and spacing:
 
 ### 🧱 Grid Basics
 
-Use for multi-column layouts:
+Create two or more columns for layout:
 
 ```css
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+  gap: 15px;
 }
 ```
 
 ---
 
-## 🪄 Part 5 – Styling Common Elements (10–15 min)
+## 🪄 Part 6 – Styling Common Elements (10–15 min)
 
 ### 🔗 Links
 
@@ -203,8 +265,11 @@ a {
 }
 a:hover {
   text-decoration: underline;
+  color: darkblue;
 }
 ```
+
+---
 
 ### 📋 Lists
 
@@ -213,7 +278,12 @@ ul {
   list-style-type: square;
   padding-left: 20px;
 }
+li:first-child {
+  color: darkred;
+}
 ```
+
+---
 
 ### 🧾 Tables
 
@@ -225,15 +295,18 @@ table, th, td {
 th, td {
   padding: 10px;
 }
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
 ```
 
 ---
 
-## 📱 Part 6 – Responsive Design (10–15 min)
+## 📱 Part 7 – Responsive Design (10–15 min)
 
 ### 🪟 Viewport Meta Tag
 
-Add this in your `<head>`:
+Add this inside `<head>`:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -241,40 +314,43 @@ Add this in your `<head>`:
 
 ### 📐 Media Queries
 
-Adjust layout for different screen sizes:
+Change layout for smaller screens:
 
 ```css
 @media (max-width: 600px) {
   body {
     font-size: 14px;
   }
+
+  nav {
+    flex-direction: column;
+  }
 }
 ```
 
 ---
 
-## ♿ Part 7 – Accessibility & Best Practices (5–10 min)
+## ♿ Part 8 – Accessibility & Best Practices (5–10 min)
 
-* Use **relative units** (`em`, `%`, `rem`) for scalable design  
-* Maintain **good color contrast**  
-* Don’t use color alone to convey meaning  
-* Ensure **hover/focus states** for interactive elements  
-* Keep your CSS organized and commented  
+* Use **relative units** (`em`, `%`, `rem`) for scalability  
+* Maintain **good contrast** between text and background  
+* Don’t rely only on **color** to show meaning  
+* Always define **hover and focus** states  
+* Organize your CSS with **comments and spacing**  
+* Prefer **external stylesheets** for maintainability  
 
 ---
 
 ## 🧾 Summary
 
-By now, you should be comfortable with:
+You should now be confident with:
 
 * Linking CSS to HTML  
-* Writing selectors and rules  
-* Styling text, colors, and layouts  
+* Using selectors, pseudo-classes, and pseudo-elements  
+* Styling text, layout, and structure  
 * Understanding the box model  
-* Using Flexbox/Grid for structure  
-* Building responsive, accessible pages  
+* Using Flexbox and Grid  
+* Writing responsive and accessible CSS  
 
-Next step → **Style your HTML CV project** using everything you learned above.
+🎯 **Next step →** Style your HTML CV project using these concepts and expand with your own custom colors, animations, and layout!
 
-## Cheat Sheet
-https://htmlcheatsheet.com/css/ 
