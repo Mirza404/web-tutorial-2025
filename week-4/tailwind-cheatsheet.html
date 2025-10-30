@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind CSS Cheat Sheet - Dark Green Grid</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Sans:wght@200..800&display=swap" rel="stylesheet">
     <style>
       body {
         background-color: #010409;
         color: #e6f1e6;
-        font-family: system-ui, sans-serif;
+        font-family: "Momo Trust Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
       }
       .card {
         background-color: #0D1117;
@@ -20,16 +25,39 @@
         transform: scale(1.02);
         box-shadow: 0 0 20px #18351c;
       }
-      h1, h2 {
+      h1 {
         color: #367C03;
+        font-weight: 800;
       }
-      code, pre {
-        background-color: #0a0d11 !important;
+      
+      h2 {
+        color: #45a005;
+        font-weight: 200;
+      }
+
+      /* Make code blocks wrap and avoid horizontal scroll; if scrollbar appears, make it black */
+      pre, code {
+        background-color: #0a0d11;
         color: #d4ffd4;
+        white-space: pre-wrap;      /* allow wrapping */
+        word-break: break-word;
+        overflow-wrap: anywhere;
       }
       pre {
-        border-color: #18351c !important;
+        border-color: #18351c;
       }
+      pre::-webkit-scrollbar {
+        height: 8px;
+        background: #000;
+      }
+      pre::-webkit-scrollbar-thumb {
+        background: #000;
+      }
+      /* Firefox scrollbar color */
+      pre {
+        scrollbar-color: #000 transparent;
+      }
+
       a {
         color: #367C03;
       }
@@ -39,124 +67,107 @@
     </style>
   </head>
   <body class="min-h-screen flex flex-col items-center py-10">
-    <h1 class="text-4xl font-bold mb-10 text-center">🌿 Tailwind CSS Cheat Sheet</h1>
+    <h1 class="text-4xl font-bold mb-10 text-center">Tailwind CSS Cheat Sheet</h1>
 
-    <!-- GRID LAYOUT -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl px-4 justify-items-center">
 
-      <!-- COLORS -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">🎨 Colors</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">Colors</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>text-blue-500
 bg-red-200
 border-green-600</code></pre>
       </section>
 
-      <!-- TYPOGRAPHY -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">🔤 Typography</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">Typography</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>text-sm / text-lg / text-2xl
 font-bold / italic / underline
 text-center / text-right</code></pre>
       </section>
 
-      <!-- SPACING -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">📏 Spacing</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">Spacing</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>m-4 / mt-2 / mx-6
 p-4 / px-8 / py-2</code></pre>
       </section>
 
-      <!-- SIZING -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">📐 Sizing</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">Sizing</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>w-4 / w-1/2 / w-full
 h-16 / h-screen</code></pre>
       </section>
 
-      <!-- DISPLAY -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">🎯 Display</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">Display</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>block / inline-block
 inline / hidden</code></pre>
       </section>
 
-      <!-- FLEX -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">⚙️ Flexbox</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">Flexbox</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>flex / flex-col / flex-row
 justify-center / items-center
 gap-4</code></pre>
       </section>
 
-      <!-- GRID -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">🧩 Grid</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">Grid</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>grid / grid-cols-2 / grid-cols-3
 gap-4 / col-span-2</code></pre>
       </section>
 
-      <!-- BACKGROUND -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">🖼️ Backgrounds</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">Backgrounds</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>bg-blue-500
 bg-gradient-to-r
 from-pink-500 to-yellow-500</code></pre>
       </section>
 
-      <!-- BORDERS -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">✨ Borders</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">Borders</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>border / border-2
 rounded / rounded-lg / rounded-full</code></pre>
       </section>
 
-      <!-- SHADOWS -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">🌫️ Shadows</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">Shadows</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>shadow-sm / shadow-md / shadow-lg / shadow-none</code></pre>
       </section>
 
-      <!-- POSITION -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">🧍 Position</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">Position</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>relative / absolute / fixed
 top-0 left-0 z-10</code></pre>
       </section>
 
-      <!-- RESPONSIVE -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">📱 Responsive</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">Responsive</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>sm: ≥640px
 md: ≥768px
 lg: ≥1024px
 xl: ≥1280px</code></pre>
       </section>
 
-      <!-- STATES -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">🌀 States</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">States</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>hover:bg-blue-700
 focus:ring-2
 active:scale-95</code></pre>
       </section>
 
-      <!-- TRANSITIONS -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">🪄 Transitions</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">Transitions</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>transition duration-300
 hover:scale-105 hover:rotate-3</code></pre>
       </section>
 
-      <!-- CONTAINERS -->
       <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">🌍 Containers</h2>
+        <h2 class="text-xl font-semibold mb-3 text-center">Containers</h2>
         <pre class="p-3 rounded border text-sm overflow-x-auto"><code>max-w-sm / max-w-md
 container mx-auto px-4</code></pre>
       </section>
 
-      <!-- EXAMPLE -->
-      <section class="card p-4 rounded-xl w-full">
-        <h2 class="text-xl font-semibold mb-3 text-center">🧭 Example Layout</h2>
-        <pre class="p-3 rounded border text-sm overflow-x-auto"><code>&lt;div class="min-h-screen flex items-center justify-center"&gt;
-  &lt;div class="p-8 bg-white rounded-lg shadow-lg text
+    </div>
+    <h2 class="mt-6 transition duration-300 hover:scale-105 text-xl font-semibold mb-3 text-center"><a href="https://nerdcave.com/tailwind-cheat-sheet">Link to a more detailed cheat sheet</a></h2>
+  </body>
+</html>
