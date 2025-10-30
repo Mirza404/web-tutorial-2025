@@ -1,4 +1,3 @@
-// ...existing code...
 
 # CSS Tutorial Roadmap (50 to 120 Minutes)
 
