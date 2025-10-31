@@ -148,13 +148,7 @@ processUserInput(function(user) {
 });
 
 
-// =====================================
-// 🧩 FINAL TASK: MODIFY THIS MINI APP
-// =====================================
-
-// Task idea:
-// Build upon this: 
-// Ask user for name, store it in an object, and greet them using functions.
+// Final task (start from here)
 
 function createUser(name, age) {
   return {
