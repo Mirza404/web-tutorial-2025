@@ -1,16 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind Example</title>
-    <!-- add tailwind -->
+    <title>Tailwind Task - Profile Card</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="p-6 bg-white rounded-xl shadow-md">
-      <h1 class="text-2xl font-bold text-blue-600 mb-4">Hello Tailwind!</h1>
-      <p class="text-gray-700">This is Tailwind running with just HTML!</p>
+    <!-- Your code goes here -->
+    <!-- YOU CAN PLAY AROUND, THIS IS JUST AN EXAMPLE  -->
+    <!-- 
+          Guide: Step-by-step tasks
+
+          Create a container card
+          Background: white
+          Padding: p-6
+          Rounded corners: rounded-xl
+          Shadow: shadow-lg
+          Width: around w-80 or similar
+
+          Add an image
+          Use any placeholder image:
+          https://via.placeholder.com/100
+          Make it circular with rounded-full
+          Center it horizontally (mx-auto)
+          Add bottom margin (mb-4)
+          Add text content
+          Name: large and bold (text-xl font-bold)
+          Role: smaller and gray (text-sm text-gray-500)
+          Description: regular text (text-gray-700 text-center mt-2)
+
+          Add a button
+          Text: “Follow”
+          Background: bg-blue-500
+          Padding: px-4 py-2
+          Rounded: rounded
+          Text color: text-white
+          Hover: hover:bg-blue-600
+          Transition: transition duration-300
+          Center it horizontally (block mx-auto mt-4) -->
+
+    <div class="card bg-white p-6 rounded-xl shadow-lg around w-80">
+      <img
+        src="
+        https://www.sony.co.jp/en/Products/di_photo-gallery/images/extralarge/1887.JPG"
+        alt="Fox pic"
+        class="rounded-[100%] mx-auto mb-4 max-w-full h-auto"
+      />
+      <div class="flex justify-center flex-col items-center">
+        <h3 class="font-bold text-xl text-gray-800"></h3>
+        <p class="text-bold text-xl">Random Fox</p>
+        <p class="text- text-gray-800">Hunter</p>
+        <p class="text-sm text-gray-500 text-center">
+          A fox goes about its day and does not care about people most of the
+          time.
+        </p>
+
+        <!-- IF YOURE UNSURE ABOUT THIS, JUST COPY  (the location.href part) -->
+        <button
+          class="bg-orange-500 text-gray-200 p-3 mt-3 rounded-full hover:shadow-lg hover:bg-orange-600 transition duration-300 hover:scale-105"
+          onclick="location.href='https://en.wikipedia.org/wiki/Fox'"
+        >
+          Find out more!
+        </button>
+      </div>
     </div>
   </body>
 </html>
