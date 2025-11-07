@@ -2,6 +2,8 @@
 
 Goal: Practice DOM selection and manipulation methods (getElementById, querySelector, .style, .innerHTML).
 
+So, you dont need to touch HTML for the most part. Inside of ``task1.html`` and ``task2.html`` you will find the HTML ready for JS integration. You already have solutions as you can see. Try them yourself first. The tasks are very easy.
+
 Description:
 Create a section with a paragraph and a button. When the user clicks the button, change the paragraph text and color. Optionally toggle between two states (for example, Light Mode and Dark Mode).
 
