@@ -1,7 +1,7 @@
 import TaskItem from "./TaskItem";
 
 function TaskList({ tasks, toggleComplete, deleteTask }) {
-  if (tasks.length === 0) return <p>No tasks yet ✅</p>;
+  if (tasks.length === 0) return <p>No tasks yet</p>;
 
   return (
     <ul>
