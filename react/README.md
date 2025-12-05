@@ -1,16 +1,40 @@
-# React + Vite
+# ✅ Complete Setup Guide: Node.js, npm, and React (with Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This guide will walk you through installing:
+1. Node.js
+2. npm (comes with Node)
+3. React using Vite (modern and fast)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✅ 1. Install Node.js (Includes npm)
 
-## React Compiler
+### 🔹 Step 1: Download Node.js
+Go to:
+https://nodejs.org
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Download the **LTS (Long Term Support)** version.
 
-## Expanding the ESLint configuration
+- ✅ Works on Windows, macOS, and Linux
+- ✅ npm is included automatically
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+### 🔹 Step 2: Verify Installation
+
+Open your terminal / command prompt and run:
+
+```bash
+node -v
+npm -v
+```
+
+## ✅ 2. Install React
+``` npm create vite@latest my-react-app```
+
+Inside the installation, select React, then JavaScript (or if you prefer, TypeScript). On "Install with npm and start now", select yes and the app will be up. The rolldown question is irrelevant to the success of our app for now, so select whatever there.
+
+To run our new app, run the following command:
+```npm run build``` to build the app, then ```npm run dev```. 
+
+That would be it.
