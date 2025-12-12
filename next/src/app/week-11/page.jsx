@@ -82,9 +82,7 @@ export default function HooksShowcasePage() {
   const [theme, setTheme] = useState("light");
 
   const pageClasses =
-    theme === "light"
-      ? "bg-gray-50 text-gray-900"
-      : "bg-gray-900 text-gray-50";
+    theme === "light" ? "bg-gray-50 text-gray-900" : "bg-gray-900 text-gray-50";
 
   return (
     <ThemeContext.Provider value={theme}>
@@ -103,7 +101,7 @@ export default function HooksShowcasePage() {
           <p className="mb-3 text-2xl font-bold">{count}</p>
           <button
             className="rounded-md bg-blue-600 px-4 py-2 font-medium text-white shadow-sm transition hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            onClick={() => setCount(c => c + 1)}
+            onClick={() => setCount((c) => c + 1)}
           >
             Increment
           </button>
@@ -120,7 +118,7 @@ export default function HooksShowcasePage() {
               className="rounded-md bg-gray-700 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
               onClick={() => {
                 console.log("Rendered again (manual trigger)");
-                setManualRenders(r => r + 1);
+                setManualRenders((r) => r + 1);
               }}
             >
               Re-render without updating count
@@ -141,7 +139,7 @@ export default function HooksShowcasePage() {
             className="mt-3 rounded-md bg-purple-600 px-3 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-400"
             onClick={() => {
               renderCount.current++;
-              setManualRenders(r => r + 1);
+              setManualRenders((r) => r + 1);
               console.log("useRef incremented manually");
             }}
           >
@@ -173,12 +171,11 @@ export default function HooksShowcasePage() {
           <ThemeConsumer />
           <button
             className="rounded-md bg-blue-600 px-4 py-2 font-medium text-white shadow-sm transition hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            onClick={() => setTheme(t => (t === "light" ? "dark" : "light"))}
+            onClick={() => setTheme((t) => (t === "light" ? "dark" : "light"))}
           >
             Toggle Theme
           </button>
         </Section>
-
       </div>
     </ThemeContext.Provider>
   );
