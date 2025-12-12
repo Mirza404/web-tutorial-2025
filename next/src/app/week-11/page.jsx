@@ -137,6 +137,16 @@ export default function HooksShowcasePage() {
             Render count (no re-render)
           </p>
           <p className="text-2xl font-bold">{renderCount.current}</p>
+          <button
+            className="mt-3 rounded-md bg-purple-600 px-3 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            onClick={() => {
+              renderCount.current++;
+              setManualRenders(r => r + 1);
+              console.log("useRef incremented manually");
+            }}
+          >
+            Increment render count ref
+          </button>
         </Section>
 
         {/* ================= useMemo ================= */}

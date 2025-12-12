@@ -280,13 +280,13 @@ export default function UseContextDemo() {
 }
 ```
 
-Teaching point:
+Overall:
 
 * No props needed to access shared state
 
 ---
 
-## Suggested Teaching Flow
+## Try to remember this
 
 1. useState → re-renders
 2. useEffect → side effects
@@ -294,11 +294,3 @@ Teaching point:
 4. useMemo → memoized values
 5. useCallback → memoized functions
 6. useContext → shared state
-
----
-
-If you want, next we can:
-
-* Add a **single demo page** that switches between hooks
-* Add **intentional bugs** to explain common mistakes
-* Create **slides** or a **live-coding outline**
