@@ -1,4 +1,4 @@
-import { UserPen, Home, Inbox, Clock11, Search, Settings } from "lucide-react";
+import { UserPen, Home, Inbox, Clock11, Clock12 } from "lucide-react";
 
 import {
   Sidebar,
@@ -32,6 +32,11 @@ const items = [
     title: "week-11-10",
     url: "/week-11",
     icon: Clock11, 
+  },
+  {
+    title: "last-week",
+    url: "/last-week",
+    icon: Clock12, 
   }
 ];
 
