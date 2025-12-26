@@ -1,0 +1,7 @@
+{
+  "students": [
+    { "name": "Alice", "grade": 85, "passed": true },
+    { "name": "Bob", "grade": 42, "passed": false },
+    { "name": "Charlie", "grade": 73, "passed": true }
+  ]
+}
